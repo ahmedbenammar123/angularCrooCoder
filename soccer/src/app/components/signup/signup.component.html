@@ -1,0 +1,78 @@
+<div class="hero overlay" style="background-image: url('assets/images/bg_3.jpg');">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-9 mx-auto text-center">
+          <h1 class="text-white">Signup</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="site-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-2">
+
+        </div>
+        <div class="col-lg-8">
+          <form [formGroup]="signupForm">
+            <div class="form-group">
+              <input type="text" formControlName="firstName" class="form-control" name="firstName" placeholder="firstName">
+              <div class="text-danger" *ngIf="signupForm.controls['firstName'].invalid && (signupForm.controls['firstName'].touched || signupForm.controls['firstName'].dirty)">
+                <div *ngIf="signupForm.controls['firstName'].errors.required">firstName is required</div>
+                <div *ngIf="signupForm.controls['firstName'].errors.minlength">Min length 3</div>
+             </div>
+             <div class="text-success" *ngIf="signupForm.controls['firstName'].valid">valid</div>
+            </div>
+            <div class="form-group">
+              <input type="text" formControlName="lastName" class="form-control" name="lastName" placeholder="lastName">
+              <div class="text-danger" *ngIf="signupForm.controls['lastName'].invalid && (signupForm.controls['lastName'].touched || signupForm.controls['lastName'].dirty)">
+                <div *ngIf="signupForm.controls['lastName'].errors.required">firstName is required</div>
+                <div *ngIf="signupForm.controls['lastName'].errors.minlength">Min length 3</div>
+             </div>
+             <div class="text-success" *ngIf="signupForm.controls['lastName'].valid">valid</div>
+            </div>
+            <div class="form-group">
+              <input type="text" formControlName="email" class="form-control" name="email" placeholder="Email">
+            </div>
+            <div class="form-group">
+              <input type="text" formControlName="pwd" class="form-control" name="pwd" placeholder="password">
+            </div>
+            <div class="form-group">
+              <input type="text" formControlName="cPwd" class="form-control" name="cPwd" placeholder="Confirme Password">
+              <div class="text-danger" *ngIf="signupForm.controls['cPwd'].invalid && (signupForm.controls['cPwd'].touched || signupForm.controls['cPwd'].dirty)">
+                <div *ngIf="signupForm.controls['cPwd'].errors.mustMatch">Must Match</div>
+             </div>
+             <div class="text-success" *ngIf="signupForm.controls['cPwd'].valid">valid</div>
+            </div>
+            <div style="margin-left:40%;" class="form-group">
+              <input type="button" (click)="signup()"  class="btn btn-warning py-3 px-5" value="Singup">
+            </div>
+          </form>
+        </div>
+        <div class="col-lg-2">
+
+        </div>
+        <!-- <div class="col-lg-4 ml-auto">
+          
+          <ul class="list-unstyled">
+            <li class="mb-2">
+              <strong class="text-white d-block">Address</strong>
+              273 South Riverview Rd. <br> New York, NY 10011
+            </li>
+            <li class="mb-2">
+              <strong class="text-white d-block">Email</strong>
+              <a href="#">info@unslate.co</a>
+            </li>
+            <li class="mb-2">
+              <strong class="text-white d-block">
+                Phone
+              </strong>
+              <a href="#">+12 345 6789 012</a>
+            </li>
+          </ul>
+        </div> -->
+      </div>
+    </div>
+  </div>
