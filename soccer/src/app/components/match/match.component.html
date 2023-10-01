@@ -4,7 +4,11 @@
     <div class="team-1 w-50">
       <div class="team-details w-100 text-center">
         <img src="assets/images/logo_1.png" alt="Image" class="img-fluid">
-        <h3>{{match.teamOne}} <span>({{compare(match.scoreOne,match.scoreTwo)[0]}})</span></h3>
+        <h3><span [ngClass]="{
+          classWin:compare(match.scoreOne,match.scoreTwo)[0]=='Win',
+          classLoss:compare(match.scoreOne,match.scoreTwo)[0]=='Loss',
+          classDraw:compare(match.scoreOne,match.scoreTwo)[0]=='Draw'
+        }">{{match.teamOne}}</span><span>({{compare(match.scoreOne,match.scoreTwo)[0]}})</span></h3>
         <ul class="list-unstyled">
           <li>Anja Landry (7)</li>
           <li>Eadie Salinas (12)</li>
@@ -16,7 +20,11 @@
     <div class="team-2 w-50">
       <div class="team-details w-100 text-center">
         <img src="assets/images/logo_2.png" alt="Image" class="img-fluid">
-        <h3>{{match.teamTwo}} <span>({{compare(match.scoreTwo,match.scoreOne)[0]}})</span></h3>
+        <h3><span  [ngClass]="{
+          classWin:compare(match.scoreTwo,match.scoreOne)[0]=='Win',
+          classLoss:compare(match.scoreTwo,match.scoreOne)[0]=='Loss',
+          classDraw:compare(match.scoreTwo,match.scoreOne)[0]=='Draw'
+        }">{{match.teamTwo}} </span><span>({{compare(match.scoreTwo,match.scoreOne)[0]}})</span></h3>
         <ul class="list-unstyled">
           <li>Macauly Green (3)</li>
           <li>Arham Stark (8)</li>
@@ -25,4 +33,5 @@
         </ul>
       </div>
     </div>
-  </div>
+    <button class="btn btn-info" (click)="goToDisplay()">Display</button>
+</div>

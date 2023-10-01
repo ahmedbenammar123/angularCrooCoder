@@ -20,6 +20,9 @@
                 <td>{{m.scoreOne}}</td>
                 <td>{{m.scoreTwo}}</td>
                 <td>
+                    <button type="button" (click)="goToDisplayMatch(m.id)" class="btn btn-info">Display</button>
+                </td>
+                <td>
                     <button type="button" (click)="deletMatch(m.id)" class="btn btn-primary">delet</button>
                 </td>
                 <td>

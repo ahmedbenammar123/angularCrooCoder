@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MatchesComponent implements OnInit {
   matches:any=[]
+  term:any
   constructor() { }
 
   ngOnInit() {

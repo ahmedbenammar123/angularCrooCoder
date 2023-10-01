@@ -13,6 +13,7 @@ import { AddPlayerComponent } from './components/add-player/add-player.component
 import { TablePlayerComponent } from './components/table-player/table-player.component';
 
 
+
 const routes: Routes = [
   ///http://localhost:4200/
   {path:'',component:HomeComponent},
@@ -30,6 +31,8 @@ const routes: Routes = [
   {path:'table-matches',component:TableMatchesComponent},
   ///http://localhost:4200/matches
   {path:'matches',component:MatchesComponent},
+  ///http://localhost:4200/matches
+  {path:'matches/:id',component:MatchesComponent},
   ///http://localhost:4200/addTeam
   {path:'add-team',component:AddTeamsComponent},
   ///http://localhost:4200/addTeam/id

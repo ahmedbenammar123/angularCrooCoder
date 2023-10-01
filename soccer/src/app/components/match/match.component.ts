@@ -6,7 +6,7 @@ import { Component,EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./match.component.css']
 })
 export class MatchComponent implements OnInit {
-  @Input() match:any
+  @Input() match:any;
   @Output() newItemEvent = new EventEmitter<any>()
   constructor() { }
 
@@ -18,7 +18,7 @@ export class MatchComponent implements OnInit {
   }
   compare(a:any,b:any){
     if(Number(a) == Number(b))
-      return ["Draw",'red'];
+      return ["Draw",'yellow'];
     return (Number(a) > Number(b)) ? ["Win","green"] : ["Loss","blue"] ;
 
   }

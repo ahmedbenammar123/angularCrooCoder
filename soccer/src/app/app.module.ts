@@ -26,7 +26,10 @@ import { AddPlayerComponent } from './components/add-player/add-player.component
 import { TablePlayerComponent } from './components/table-player/table-player.component';
 import { MatchComponent } from './components/match/match.component';
 import { BannerComponent } from './components/banner/banner.component';
-
+import { ReversePipe } from './pipe/reverse.pipe';
+import { VoyellePipe } from './pipe/voyelle.pipe';
+import { ColorDirective } from './directives/color.directive';
+import { FilterPipe } from './pipe/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -51,7 +54,11 @@ import { BannerComponent } from './components/banner/banner.component';
     AddPlayerComponent,
     TablePlayerComponent,
     MatchComponent,
-    BannerComponent
+    BannerComponent,
+    ReversePipe,
+    VoyellePipe,
+    ColorDirective,
+    FilterPipe,
   ],
   imports: [
     BrowserModule,
